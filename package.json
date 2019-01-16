@@ -1,0 +1,30 @@
+{
+  "name": "eleven01-dapp1",
+  "version": "0.0.1",
+  "description": "Eleven01 blockchain dapp using truffle metamask ejs nodejs solc",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meegada-Mahesh/Eleven01-Sample.git"
+  },
+  "keywords": [
+    "Eleven01",
+    "Blockchain",
+    "Nodejs",
+    "Web3",
+    "metamask",
+    "truffle"
+  ],
+  "author": "Meegada Mahesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meegada-Mahesh/Eleven01-Sample/issues"
+  },
+  "homepage": "https://github.com/Meegada-Mahesh/Eleven01-Sample#readme",
+  "dependencies": {
+    "solc": "^0.4.24"
+  }
+}

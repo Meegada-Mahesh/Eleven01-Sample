@@ -1,0 +1,5 @@
+# Ignoring following files and folders
+
+package-lock.json
+
+node_modules
