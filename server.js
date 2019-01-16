@@ -1,31 +1,30 @@
 const express = require("express");
 const ejs = require("ejs");
-const solc = require("solc");
-const Web3 = require("web3");
+const routing = require("./controllers/routes");
 const bodyParser = require("body-parser");
 
-const RPC_ENDPOINT = "40.83.215.160:8083/api/node/rpc";
+// Core modules of nodejs to filesystem and path
+const fs = require("fs");
+const path = require("path")
 
-const provider = new Web3.providers.HttpProvider(RPC_ENDPOINT);
+// app engine
+const app = express();
 
-const web3 = new Web3(provider);
 
 
+// Middlewares for to connect to nodejs and routing
 app.set("view engine","ejs")
 app.set("views",__dirname+"/views")
-
-
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json())
+app.use('/user',routing);
 
 
+// Default route
 app.get('/',function(req,res){
     res.send("Default Route for dApp")
 })
 
 
-const app = express();
-
 app.listen(8080);
-
 console.log("Hello Guys server is running at port 8080");
